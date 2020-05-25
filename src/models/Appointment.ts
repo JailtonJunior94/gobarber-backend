@@ -12,7 +12,7 @@ import User from './User';
 
 @Entity('appointments')
 class Appointment {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('increment')
   id: string;
 
   @Column('varchar')
@@ -22,7 +22,7 @@ class Appointment {
   @JoinColumn({ name: 'provider_id' })
   provider: User;
 
-  @Column('time with time zone')
+  @CreateDateColumn()
   date: Date;
 
   @CreateDateColumn()

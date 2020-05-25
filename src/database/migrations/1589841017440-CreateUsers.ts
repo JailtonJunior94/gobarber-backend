@@ -8,10 +8,8 @@ export default class CreateUsers1589841017440 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'uuid',
+            type: 'varchar',
             isPrimary: true,
-            generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
           },
           {
             name: 'name',
@@ -28,13 +26,11 @@ export default class CreateUsers1589841017440 implements MigrationInterface {
           },
           {
             name: 'created_at',
-            type: 'timestamp',
-            default: 'now()',
+            type: 'datetime',
           },
           {
             name: 'updated_at',
-            type: 'timestamp',
-            default: 'now()',
+            type: 'datetime',
           },
         ],
       }),

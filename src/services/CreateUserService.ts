@@ -24,6 +24,7 @@ class CreateUserService {
       name,
       password: hashedPassword,
       email,
+      created_at: new Date(),
     });
     await usersRepository.save(user);
 

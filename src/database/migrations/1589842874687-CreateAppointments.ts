@@ -14,29 +14,25 @@ export default class CreateAppointments1589842874687
         columns: [
           {
             name: 'id',
-            type: 'uuid',
+            type: 'varchar',
             isPrimary: true,
-            generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
           },
           {
             name: 'provider_id',
-            type: 'uuid',
+            type: 'varchar',
             isNullable: true,
           },
           {
             name: 'date',
-            type: 'timestamp with time zone',
+            type: 'datetime',
           },
           {
             name: 'created_at',
-            type: 'timestamp',
-            default: 'now()',
+            type: 'datetime',
           },
           {
             name: 'updated_at',
-            type: 'timestamp',
-            default: 'now()',
+            type: 'datetime',
           },
         ],
       }),
